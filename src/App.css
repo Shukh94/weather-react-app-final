@@ -1,0 +1,9 @@
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.App footer {
+  text-align: center;
+  margin-top: 10px;
+}
