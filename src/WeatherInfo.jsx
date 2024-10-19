@@ -6,9 +6,9 @@ import WeatherTemp from "./WeatherTemp";
 function WeatherInfo(props) {
   const weatherData = {
     celsius: props.data.temperature,
-    feels: props.data.feels,
-    maxTemp: props.data.maxTemp,
-    minTemp: props.data.minTemp,
+    feels: Math.round(props.data.feels),
+    maxTemp: Math.round(props.data.maxTemp),
+    minTemp: Math.round(props.data.minTemp),
   };
 
   return (
