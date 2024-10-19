@@ -4,6 +4,13 @@ import AnimateIcon from "./AnimateIcon";
 import WeatherTemp from "./WeatherTemp";
 
 function WeatherInfo(props) {
+  const weatherData = {
+    celsius: props.data.temperature,
+    feels: props.data.feels,
+    maxTemp: props.data.maxTemp,
+    minTemp: props.data.minTemp,
+  };
+
   return (
     <div className="WeatherInfo">
       <h1>{props.data.city}</h1>
@@ -16,7 +23,14 @@ function WeatherInfo(props) {
       <div className="row">
         <div className="col-6 weather-info">
           <AnimateIcon code={props.data.icon} />
-          <WeatherTemp celsius={props.data.temperature} />
+          <WeatherTemp
+            celsius={weatherData.celsius}
+            data={{
+              feels: weatherData.feels,
+              maxTemp: weatherData.maxTemp,
+              minTemp: weatherData.minTemp,
+            }}
+          />
         </div>
         <div className="col-6">
           <ul className="info-right">
@@ -25,15 +39,6 @@ function WeatherInfo(props) {
           </ul>
         </div>
       </div>
-      {/* <div className="row">
-        <div className="col-6 other-info">
-          <ul className="other-info">
-            <li>Feels Like: {props.data.feels}°C</li>
-            <li>max: {props.data.maxTemp}°C</li>
-            <li>Min: {props.data.minTemp}°C</li>
-          </ul>
-        </div>
-      </div> */}
     </div>
   );
 }
