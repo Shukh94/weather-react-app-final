@@ -106,7 +106,7 @@
   color: rgba(39, 33, 66, 0.4);
   list-style: none;
   text-align: start;
-  margin-left: 8px;
+  margin-left: 6px;
   padding: 0;
   font-size: 14px;
   width: 100%;
@@ -118,7 +118,7 @@
 }
 
 .Weather canvas {
-  margin: 10px 0;
+  margin: 6px 0;
 }
 
 .Weather footer {

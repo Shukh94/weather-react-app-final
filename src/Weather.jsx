@@ -13,12 +13,11 @@ function Weather(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
-      coordninates: response.data.coord,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       city: response.data.name,
-      // icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
@@ -29,7 +28,7 @@ function Weather(props) {
   }
 
   function search() {
-    const apiKey = "7746bdeabca928cfedcad71e52fd9d66";
+    const apiKey = "f5e814a04eddfab1740f07bf0328eee2";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -67,7 +66,7 @@ function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <WeatherForecast coordninates={weatherData.coordninates} />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
