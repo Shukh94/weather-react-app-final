@@ -22,7 +22,7 @@ function WeatherInfo(props) {
       </ul>
       <div className="row">
         <div className="col-6 weather-info">
-          <AnimateIcon code={props.data.icon} />
+          <AnimateIcon code={props.data.icon} size={64} />
           <WeatherTemp
             celsius={weatherData.celsius}
             data={{

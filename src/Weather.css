@@ -5,7 +5,8 @@
 
 .weather-info {
   display: flex;
-  align-items: center;
+  vertical-align: top;
+  align-items: start;
 }
 
 .Weather {
@@ -37,8 +38,8 @@
 }
 
 .Weather canvas {
-  width: 64px;
-  height: 64px;
+  /* width: 64px;
+  height: 64px; */
   margin: 0;
   margin-left: 0;
 }
@@ -103,21 +104,18 @@
 
 .other-info {
   color: rgba(39, 33, 66, 0.4);
-  /* display: flex;
-  gap: 20px; */
   list-style: none;
   text-align: start;
   margin-left: 8px;
   padding: 0;
   font-size: 14px;
+  width: 100%;
 }
 
 .Weather li strong {
   color: #f65282;
   font-weight: normal;
 }
-
-
 
 .Weather canvas {
   margin: 10px 0;
